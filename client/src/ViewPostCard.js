@@ -60,7 +60,6 @@ const ViewPostCard = ({ post, comments, username,  message, onChangeHandler, han
           <h4> Enter a Comment</h4>
         <CommentForm
           username={username}
-          
           message={message}
           handleCommentSubmit={handleCommentSubmit}
           onChangeHandler={onChangeHandler}
@@ -75,7 +74,6 @@ ViewPostCard.propTypes = {
   post: PropTypes.object.isRequired,
   comments: PropTypes.array.isRequired,
   username: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   deleteComment: PropTypes.func.isRequired,
   onChangeHandler: PropTypes.func.isRequired,
