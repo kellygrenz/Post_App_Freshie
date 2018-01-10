@@ -51,7 +51,7 @@ class App extends Component {
           <Header />
           
     
-          <Route exact path='/' component={Home} />
+          <Route exact path='/create-post' component={Home} />
           <Route exact path='/post/:postId' render={() => <ViewSinglePost deletePost={this.deletePost} />} />
           {
             this.state.posts

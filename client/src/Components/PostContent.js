@@ -10,7 +10,7 @@ const style = {
     width: '80%'
   },
   img: {
-    width: '90%'
+    width: '100%'
   },
   title: {
     fontFamily: 'Shadows Into Light, cursive',

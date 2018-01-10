@@ -2,13 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
+const style = {
+  comment: {
+    background: '#fff',
+    padding: '20px', 
+    marginBottom: '10px'
+  }
+}
+
 const SingleComment = ({ comment, deleteComment }) => {
   return (
-    <div>
+    <div style={style.comment}>
       <img alt='' src={comment.icon} />
-      <p>{comment.username}</p>
-      <p>{comment.message}</p>
-      <Button handleClick={() => deleteComment(comment._id)}>DELETE</Button>
+      <h3>{comment.message}</h3>
+      <p>- {comment.username}</p>
+      
+      <Button handleClick={() => deleteComment(comment._id)}>DELETE COMMENT</Button>
     </div>
   )
 }

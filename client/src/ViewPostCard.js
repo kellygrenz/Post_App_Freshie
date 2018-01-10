@@ -38,16 +38,19 @@ const style = {
     color: '#fff',
     fontFamily: 'Yanone Kaffeesatz, sans-serif',
     fontSize: '25px'
+  },
+  commentContainer: {
+    borderTop: '1px dashed #F27935'
   }
 }
 
-const ViewPostCard = ({ post, comments, username, icon, message, onChangeHandler, handleCommentSubmit, deleteComment }) => {
+const ViewPostCard = ({ post, comments, username,  message, onChangeHandler, handleCommentSubmit, deleteComment }) => {
   return (
     <div style={style.container}>
      
       <PostContent post={post} message={post.message} />
       <Link style={style.link} to={`/edit-post/${post._id}`}>Edit This Post</Link>
-      <div>
+      <div style={style.commentContainer}>
         <h2>Comments:</h2>
         <CommentList
           comments={comments}
@@ -57,7 +60,7 @@ const ViewPostCard = ({ post, comments, username, icon, message, onChangeHandler
           <h4> Enter a Comment</h4>
         <CommentForm
           username={username}
-          icon={icon}
+          
           message={message}
           handleCommentSubmit={handleCommentSubmit}
           onChangeHandler={onChangeHandler}
